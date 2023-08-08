@@ -1,10 +1,12 @@
 import React from 'react'
-
+import { AppContext } from './context/contextApi'
 function App() {
     return (
-        <div>
-            <h1 className='text-4xl text-yellow-700'>helooooo</h1>
-        </div>
+        <>
+            <AppContext>
+                <div>App id ready</div>
+            </AppContext>
+        </>
     )
 }
 
