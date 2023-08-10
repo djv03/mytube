@@ -1,0 +1,58 @@
+import React from 'react'
+
+import { Link } from 'react-router-dom'
+import { BsFillCheckCircleFill } from 'react-icons/bs'
+import { abbreviateNumber } from 'js-abbreviation-number'
+import VideoLength from '../shared/VideoLength'
+function Videocard({ video }) {
+    return (
+        <Link to={`/video/${video.videoId}`}>
+            <div className="flex flex-col mb-8">
+                <div className="relative h-48 md:h-40 md:rounded-xl overflow-hidden">
+                    <img
+                        className='h-full w-full object-cover'
+                        src={video?.thumbnails?.[0]?.url}
+                        alt="thumbnail" />
+                    {video?.lengthSeconds && (
+                        <VideoLength time={video?.lengthSeconds} />
+                    )}
+                </div>
+                <div className="flex text-white mt-3">
+                    <div className="flex items-start">
+
+                        <div className=" flex h-9 w-9 rounded-full overflow-hidden">
+                            <img
+                                className='h-full w-full object-cover'
+                                src={video?.author?.avatar[0]?.url} alt="channel"
+                            />
+                        </div>
+                    </div>
+                    <div className=" flex flex-col mx-2 overflow-hidden">
+                        <span className='text-[18px] font-bold line-clamp-2 text-white/[0.8]'>
+                            {video?.title}
+                        </span>
+                        <span className='text-[14px]  mt-2 text-white/[0.7] flex items-center ' >
+                            {video?.author?.title}
+                            {video?.author?.badges[0]?.type === 'VARIFIED CHANNEL' && (
+                                <BsFillCheckCircleFill className='text-white/50 text-[12px] ml-1' />
+                            )}
+                        </span>
+                        <div className="flex text-[12px] font-semibold  text-white/[0.7] truncate overflow-hidden ">
+                            <span>
+                                {`${abbreviateNumber(video.stats.views, 2)} views`}
+                            </span>
+                            <span className='flex text-[24px] leading-none font-bold  text-white/[0.7] relative top-[-10px] mx-1 '>
+                                .
+                            </span>
+                                <span className="truncate">
+                                    {video.publishedTimeText}
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Link>
+    )
+}
+
+export default Videocard

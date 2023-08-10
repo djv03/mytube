@@ -6,7 +6,7 @@ export const Context = createContext();
 export const AppContext = (props) => {
     const [loading, setLoading] = useState(false);
     const [searchResults, setSearchResults] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState("virat");
+    const [selectedCategory, setSelectedCategory] = useState("javascript");
     const [mobileMenu, setMobileMenu] = useState(false);
 
     useEffect(() => {

@@ -24,7 +24,7 @@ function Leftnav() {
             <div className="flex px-5 flex-col">
                 {categories.map((item) => {
                     return (
-                        <React.Fragment>
+                        <React.Fragment key={item.name}>
                             <LeftNavitems
                                 text={item.type === 'home' ? "home" : item.name}
                                 icon={item.icon}
