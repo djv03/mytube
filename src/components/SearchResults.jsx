@@ -6,7 +6,8 @@ import { Context } from '../context/contextApi'
 import Leftnav from './Leftnav'
 import SearchResultvideocard from '../components/SearchResultvideocard'
 const SearchResults = () => {
-  const [results, setResults] = useState;
+  const [results, setResults] = useState();
+  console.log(results)
   const { searchQuery } = useParams()
   const { setLoading } = useContext(Context)
 
@@ -18,8 +19,10 @@ const SearchResults = () => {
   const fetchSearchresults = () => {
     setLoading(true);
     fetchDataFromApi(`search/?q=${searchQuery}`).then((res) => {
-      setResults(res?.contents);
+      setResults(res.contents);
       setLoading(false);
+    }).catch((err)=>{
+      console.log(err)
     })
   }
   return (
@@ -39,7 +42,6 @@ const SearchResults = () => {
         </div>
 
       </div>
-      your result here
     </div>
   )
 }

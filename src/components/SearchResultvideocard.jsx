@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import VideoLength from '../shared/VideoLength'
 
-import { BsFillCheckCircleFill } from 'react-icons/bs '
+import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { abbreviateNumber } from 'js-abbreviation-number'
 function SearchResultvideocard({ video }) {
     return (
@@ -19,7 +19,7 @@ function SearchResultvideocard({ video }) {
                         <VideoLength time={video?.lengthSeconds} />
                     )}
                 </div>
-                <div className="flex flex-col mt-4 md:mt-4 overflow-hidden">
+                <div className="flex flex-col mt-4 md:mt-4 overflow-hidden mx-4">
                     <span className='text-lg md:text-2xl font-semibold line-clamp-2 text-white'>
                         {video?.title}
                     </span>
@@ -29,7 +29,7 @@ function SearchResultvideocard({ video }) {
                     <div className="hidden md:flex items-center">
                         <div className="flex items-start mr-3">
                             <div className="flex h-9 w-9 rounded-full overflow-hidden">
-                                <img className='h-full w-full object-cover' src={video.author.avatar[0]?.url} alt="" />
+                                <img className='h-full w-full object-cover' src={video?.author?.avatar[0]?.url} alt="" />
                             </div>
                         </div>
                         <div className="flex flex-col">
