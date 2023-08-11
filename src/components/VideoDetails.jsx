@@ -19,11 +19,11 @@ const VideoDetails = () => {
     document.getElementById("root").classList.add("custom-h");
     fetchVideoDetails();
     fetchRelatedVideos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [id]);
   const fetchVideoDetails = () => {
     setLoading(true);
     fetchDataFromApi(`video/details/?id=${id}`).then((res) => {
-      console.log('VideoDetails', res)
       setVideo(res)
       setLoading(false)
     })

@@ -1,12 +1,9 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
-
 import LeftNavitems from './LeftNavitems'
 import { categories } from '../utils/constants'
 import { Context } from '../context/contextApi'
 function Leftnav() {
     const { selectedCategory, setSelectedCategory, mobileMenu } = useContext(Context)
-    console.log(mobileMenu);
     const clickHandler = (name, type) => {
         switch (type) {
             case 'category':

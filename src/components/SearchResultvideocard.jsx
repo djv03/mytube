@@ -20,7 +20,7 @@ function SearchResultvideocard({ video }) {
                     )}
                 </div>
                 <div className="flex flex-col mt-4 md:mt-4 overflow-hidden mx-4">
-                    <span className='text-lg md:text-2xl font-semibold line-clamp-2 text-white'>
+                    <span className=' md:text-2xl font-semibold line-clamp-2 text-white'>
                         {video?.title}
                     </span>
                     <span className='empty:hidden text-sm line-clamp-1 md:line-clamp-2 text-white/[0.7] md:pr-24 md:my-4'>

@@ -7,14 +7,14 @@ import Leftnav from './Leftnav'
 import SearchResultvideocard from '../components/SearchResultvideocard'
 const SearchResults = () => {
   const [results, setResults] = useState();
-  console.log(results)
   const { searchQuery } = useParams()
   const { setLoading } = useContext(Context)
 
-  useEffect(() => {
+  useEffect(()=>{
     document.getElementById("root").classList.remove('custom-h');
     fetchSearchresults();
-  }, [searchQuery])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[searchQuery])
 
   const fetchSearchresults = () => {
     setLoading(true);
