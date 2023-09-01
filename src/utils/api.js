@@ -1,3 +1,5 @@
+//this is the heart of programme, means all the data for out appplication is pupmping out from here, all the api request is hitting from her
+
 import axios from "axios";
 
 const BASE_URL = "https://youtube138.p.rapidapi.com";
@@ -6,7 +8,7 @@ const options = {
     params: { hl: "en", gl: "US" },
     headers: {
         "X-RapidAPI-Key":
-            process.env.REACT_APP_MY_KEY,
+            process.env.REACT_APP_MY_SECOND_KEY,
         "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
 };

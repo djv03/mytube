@@ -35,7 +35,7 @@ function Leftnav() {
                     )
                 })}
                 <hr className='my-5 border-white/[0.2]' />
-                <div className="text-white/[0.5] text-[12px]">clone by djv</div>
+                <div className="text-white/[0.5] text-[12px]">clone by Sahil Unagar</div>
             </div>
         </div>
     )
