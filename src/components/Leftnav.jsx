@@ -34,8 +34,9 @@ function Leftnav() {
                         </React.Fragment>
                     )
                 })}
-                <hr className='my-5 border-white/[0.2]' />
-                <div className="text-white/[0.5] text-[12px]">clone by Sahil Unagar</div>
+                <hr className='my-9  border-white/[0.2]' />
+                <div className="text-white/[0.5] text-[12px]">Mytube by Dhruvin</div>
+                <a href='https://github.com/djv03/mytube' className="text-red-400 text-[18px] mt-2 hover:text-red-600">Github</a>
             </div>
         </div>
     )
