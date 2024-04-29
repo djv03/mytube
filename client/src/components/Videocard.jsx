@@ -28,10 +28,10 @@ function Videocard({ video }) {
                         </div>
                     </div>
                     <div className=" flex flex-col mx-2 overflow-hidden">
-                        <span className='text-[18px] font-bold line-clamp-2 text-white/[0.8]'>
+                        <span className='text-[14px] font-bold line-clamp-2 text-white/[0.8]'>
                             {video?.title}
                         </span>
-                        <span className='text-[14px]  mt-2 text-white/[0.7] flex items-center ' >
+                        <span className='text-[13px] text-white/[0.7] flex items-center ' >
                             {video?.author?.title}
                             {video?.author?.badges[0]?.type === 'VARIFIED CHANNEL' && (
                                 <BsFillCheckCircleFill className='text-white/50 text-[12px] ml-1' />
